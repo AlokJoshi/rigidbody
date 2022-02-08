@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rigid Body</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="controls">
+    <label for="line1">Size (Between 10 and 300)</label>
+    <input type="range" min="10" max="300" step="10" id="line1">
+    <label for="smoothness">Smoothness (Between 1 and 100 )</label>
+    <input type="range" min="0" max="100" step="5" id="smoothness">
+    <label for="angleMultiplier">Angle Multiplier</label>
+    <input type="text" id="angleMultiplier">
+    <br>
+    <label for="useSinAngleMultiplier">Use Sin</label>
+    <input type="checkbox" id="useSinAngleMultiplier">
+    <label for="sinAngleMultiplier">Sin Angle Multiplier</label>
+    <input type="text" id="sinAngleMultiplier">
+    <label for="useCosAngleMultiplier">Use Cos</label>
+    <input type="checkbox" id="useCosAngleMultiplier">
+    <label for="cosAngleMultiplier">Cos Angle Multiplier</label>
+    <input type="text" id="cosAngleMultiplier">
+    <div>
+      <input type="radio" id="typeline" name="typedraw" value="line">
+      <label for="typeline">Line</label>
+      <label for="linethickness">Thickness</label>
+      <input type="range" id="linethickness" min="0" max="20" step="1">
+      
+
+    </div>
+    
+    <div>
+      <input type="radio" id="typecircle" name="typedraw" value="circle" checked>
+      <label for="typecircle">Circle</label>
+      <label for="radius">Radius</label>
+      <input type="range" id="radius" min="0" max="50" step="1">
+    </div>
+    
+    <div>
+      <input type="radio" id="typesquare" name="typedraw" value="square">
+      <label for="typesquare">Square</label>
+      <label for="squaresize">Size</label>
+      <input type="range" id="squaresize" min="0" max="50" step="1">
+    </div>
+
+    <label>Color for line/circle/square</label>
+    <input type="radio" id="colorred" name="color" value="red" checked>
+    <label for="colorred">Red</label>
+    <input type="radio" id="colorgreen" name="color" value="green">
+    <label for="colorgreen">Green</label>
+    <input type="radio" id="colorblue" name="color" value="blue">
+    <label for="colorblue">Blue</label>
+    <input type="radio" id="coloryellow" name="color" value="yellow">
+    <label for="coloryellow">Yellow</label>
+    <input type="radio" id="colorrandom" name="color" value="random">
+    <label for="colorrandom">Random</label>
+
+    <div>
+      <input type="radio" id="typeimage" name="typedraw" value="image">
+      <label for="typeimage">Image</label>
+      <label for="imagesize">Size</label>
+      <input type="number" min="20" max="300" step="20" id="imagesize">
+    </div>
+    <br />
+    <button id="clear">Clear</button>
+    <button id="again">Again</button>
+  </div>
+  <canvas id="canvas1"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
